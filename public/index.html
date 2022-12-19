@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <title>Skolasoft</title>
+    <title>Välkommen till min server!</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
   </head>
   <body>
-      <h1>Välkommen till Skolasoft!</h1>
-<h2>Vill du <button>logga in?</button> eller <a href="./regristrering.html"><button>regristrera dig?</button></a></h2>
-
+    <div id="container">
+      <h1>Välkommen till SkolaSoft!</h1>
+      <ul>
+        <li><p>Vem vet, detta kanske blir något allvarligt någon gång :D</p></li>
+      </ul>
+    </div>
+    <form action="/logout?_method=DELETE" method="POST">
+      <button type="submit">Logga Ut</button>
+  </form>
   </body>
 </html>

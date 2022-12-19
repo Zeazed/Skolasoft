@@ -1,25 +1,19 @@
-# Skolasoft
+# Skola Soft
 
-Detta ska bli ett login/regristreringsystems projekt med hjälp av localstorage. Det ska finnas en huvudsida där man kan välja om man vill till login sidan eller regristreringsidan sedan ska det även finnas en enkel huvudsida med rolig info.
+Ett enkelt login/regristrerings api för ett skolprojekt. Hoppas det blir godkänt :D
 
 ## Install
 
 ```
-$ npm install
+Skriv "npm install" för att få alla dependencies och sedan "npm run build".
+
 ```
 
 ## Usage
 
 ```
-
+Du startar själva hemsidan genom att använda "npm run devStart" och sedan går in i "localhost:3000" på din utvalda webbläsare
 ```
-
-## API
-
-### Functions
-
-### Class
-
 ## License
 
 , see the file COPYING.
@@ -30,8 +24,8 @@ Please feel free to open an issue or submit a pull request.
 
 ## Changelog
 
-- **0.0.1** 2022-12-13 First version published
+- **0.0.1** _2022-12-19_ First version published
 
 ## Author
 
-**©Zeazed 2022 [MY_URL](MY_URL)**
+**©Zeazed 2022 **

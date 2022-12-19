@@ -1,0 +1,17 @@
+<h1>Logga in på SkolaSoft!</h1>
+<% if (messages.error) { %>
+  <%= messages.error %>
+<% } %>
+<link rel="stylesheet" href="css/login.css">
+<form action="/login" method="POST">
+  <div>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" required><br>
+  </div>
+  <div>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" required><br>
+  </div>
+  <button type="submit">Logga In</button><br>
+</form>
+<a href="/register"><button id="Btn">Regristrera Dig</button></a><br>

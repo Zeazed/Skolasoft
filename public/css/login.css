@@ -39,7 +39,7 @@ body {
   
   button {
     position: relative;
-    top: 200px;
+    top: 20px;
     left: 3px;
     border: 1px solid lightcoral;
     border-radius: 50px;
@@ -49,34 +49,12 @@ body {
   
   #Btn {
     position: relative;
-    left: 845px;
-    top: 155px;
+    left: 815px;
+    top: 100px;
     border: 2px solid lightcoral;
    border-radius: 50px;
   }
   
   button:hover {
     background-color: white;
-  }
-
-  ul {
-    position: absolute;
-    top: 360px;
-    left: 790px;
-    color: black;
-    font-size: 20px;
-    border: 2px solid lightcoral;
-    border-radius: 50px;
-    z-index: 1;
-    width: 160px;
-    height: 90px;
-    list-style-type: none;
-    text-align: center;
-    padding: 10px;
-    margin: 15px;
-  }
-
-  li {
-    position: relative;
-    top: -17px;
   }

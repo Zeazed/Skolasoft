@@ -1,0 +1,60 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  position: relative;
+  top: 140px;
+  left: 710px;
+  border: 2px lightcoral solid;
+  width: 350px;
+  text-align: center;
+  background-color: lightcyan;
+  border-radius: 50px;
+}
+
+form{
+  position: relative;
+  left: 680px;
+  top: 200px;
+  margin: 5px;
+  padding-top: 30px;
+  width: 400px;
+  height: 300px;
+  border: 2px lightcoral solid;
+ text-align: center;
+ background-color: lightcyan;
+ border-radius: 50px;
+}
+
+form label {
+  margin: 57px;
+  font-size: 40px;
+}
+
+#passwordl {
+  position: relative;
+  left: -15px;
+}
+
+button {
+  position: relative;
+  top: 20px;
+  left: 3px;
+  border: 1px solid lightcoral;
+  border-radius: 50px;
+  font-size: 20px;
+  transition-duration: 0.5s;
+}
+
+#Btn {
+  position: relative;
+  left: 840px;
+  top: 155px;
+  border: 2px solid lightcoral;
+ border-radius: 50px;
+}
+
+button:hover {
+  background-color: white;
+}
