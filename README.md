@@ -12,7 +12,7 @@ Skriv "npm install" för att få alla dependencies och sedan "npm run build".
 ## Usage
 
 ```
-Du startar själva hemsidan genom att använda "npm run devStart" och sedan går in i "localhost:3000" på din utvalda webbläsare
+Du startar själv hemsidan genom att använda "npm run devStart" och sedan går in i "localhost:3000/login" på din utvalda webbläsare
 ```
 ## License
 

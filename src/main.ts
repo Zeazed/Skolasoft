@@ -33,11 +33,11 @@ const methodOverride = require('method-override')
 const initializePassport = require('./passport-config')
 initializePassport(
     passport, 
-    email => users.find(user => user.email === email),
-    id => users.find(user => user.id === id)
+    (    email: any) => users.find((user: { email: any; }) => user.email === email),
+    (    id: any) => users.find((user: { id: any; }) => user.id === id)
 )
 
-const users = []
+const users:any = []
 
 app.use(flash())
 app.use(session({
@@ -48,11 +48,11 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.get('/', checkAuthenticated, (req, res) => {
-    res.render('index.ejs', { name: req.user.name})
+app.get('/', checkAuthenticated, (req:any, res:any) => {
+    res.render('index.ejs')
 })
 
-app.get('/login', checkNotAuthenticated, (req, res) => {
+app.get('/login', checkNotAuthenticated, (req:any, res:any) => {
     res.render('login.ejs')
 })
 
@@ -62,11 +62,11 @@ app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
     failureFlash: true
 }))
 
-app.get('/register', checkNotAuthenticated, (req, res) => {
+app.get('/register', checkNotAuthenticated, (req:any, res:any) => {
     res.render('register.ejs')
 })
 
-app.post('/register', checkNotAuthenticated, async (req, res) => {
+app.post('/register', checkNotAuthenticated, async (req:any, res:any) => {
     try {
         const ePassword = await bcrypt.hash(req.body.password, 10)
         users.push({
@@ -82,8 +82,8 @@ app.post('/register', checkNotAuthenticated, async (req, res) => {
     console.log(users)
 })
 
-app.delete('/logout', (req, res, next) => {
-    req.logOut((err) => {
+app.delete('/logout', (req:any, res:any, next:any) => {
+    req.logOut((err:any) => {
       if (err) {
         return next(err);
       }
@@ -91,7 +91,7 @@ app.delete('/logout', (req, res, next) => {
     });
   });
 
-function checkAuthenticated(req, res, next) {
+function checkAuthenticated(req:any, res:any, next:any) {
     if(req.isAuthenticated()) {
         return next()
     }
@@ -99,14 +99,14 @@ function checkAuthenticated(req, res, next) {
     res.redirect('/login')
 }
 
-function checkNotAuthenticated(req, res, next) {
+function checkNotAuthenticated(req:any, res:any, next:any) {
     if(req.isAuthenticated()) {
         return res.redirect('/')
     }
     next()
 }
 
-app.get('*', function (req, res) {
+app.get('*', function (req:any, res:any) {
     fs.readFile("./views/404.ejs", "utf-8").then((data) => {
         res.status(404).send(data);
       });

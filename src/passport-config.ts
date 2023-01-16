@@ -4,8 +4,8 @@ import { nextTick } from "process"
 const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcrypt')
 
-function initialize(passport, getUserByEmail, getUserById) {
-    const authenticateUser = async (email, password, done) => {
+function initialize(passport:any, getUserByEmail:any, getUserById:any) {
+    const authenticateUser = async (email:any, password:any, done:any) => {
         const user = getUserByEmail(email)
         if(user == null){
             return done(null, false, { message: ' Ingen användare '})
@@ -23,8 +23,8 @@ function initialize(passport, getUserByEmail, getUserById) {
         }
     }
     passport.use(new LocalStrategy({ usernameField: 'email'}, authenticateUser))
-    passport.serializeUser((user, done) => done(null, user.id))
-    passport.deserializeUser((id, done) => {
+    passport.serializeUser((user: { id: any }, done: (arg0: null, arg1: any) => any) => done(null, user.id))
+    passport.deserializeUser((id: any, done: (arg0: null, arg1: any) => any) => {
        return done(null, getUserById(id))
     })
 }
